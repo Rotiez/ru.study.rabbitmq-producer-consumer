@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  rabbitmq:
+    default-props:
+      queue: ${RABBITMQ_DEFAULT_QUEUE:rotiez-queue}
+      exchange: ${RABBITMQ_DEFAULT_EXCHANGE:rotiez-exchange}
+      routing-key: ${RABBITMQ_DEFAULT_ROUTING_KEY:rotiez-routingKey}
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USERNAME:guest}
+    password: ${RABBITMQ_PASSWORD:guest}
